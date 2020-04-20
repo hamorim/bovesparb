@@ -27,22 +27,16 @@ client = Bovesparb::Client.new
 client.quotes('BIDI4')
 
 {
-  :ComportamentoPapeis => {
-    :Papel => [
-      {
-        :Codigo=>"BIDI4",
-        :Nome=>"BANCO INTER PN      N2",
-        :Ibovespa=>"",
-        :Data=>"27/10/2019 10:14:09",
-        :Abertura=>"16,55",
-        :Minimo=>"16,43",
-        :Maximo=>"16,74",
-        :Medio=>"16,60",
-        :Ultimo=>"16,60",
-        :Oscilacao=>"0,30"
-      }
-    ]
-  }
+  :ticket=>"BIDI4",
+  :name=>"BANCO INTER PN      N2",
+  :Ibovespa=>"",
+  :date=>"20/04/2020 12:59:40",
+  :open=>"9,10",
+  :low=>"8,84",
+  :high=>"9,29",
+  :average=>"9,11",
+  :close=>"9,24",
+  :variation=>"0,22"
 }
 ```
 

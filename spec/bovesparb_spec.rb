@@ -9,9 +9,13 @@ RSpec.describe Bovesparb do
   end
 
   it "search for a quote" do
-    result = @client.quotes "BIDI4"
-    quote = result[:ComportamentoPapeis][:Papel].first
-    expect(quote[:Codigo]).to eq "BIDI4"
-    expect(quote[:Nome]).to eq "BANCO INTER PN      N2"
+    result = @client.quotes("BIDI4").first
+    expect(result[:ticket]).to eq "BIDI4"
+    expect(result[:name]).to eq "BANCO INTER PN      N2"
+  end
+
+  it "search for multiple quotes" do
+    result = @client.quotes "BIDI4|MGLU3"
+    expect(result.length).to eq 2
   end
 end
